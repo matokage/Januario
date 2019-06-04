@@ -31,9 +31,9 @@ PORT = 6667
 #configuração do Bot
 NICK = "Januario"
 IDENT = "Anuario"
-REALNAME = "Esfincter"
-MASTER = "OPrario"
-CHANNEL = "#TavernaDosAnões"
+REALNAME = "Janu"
+MASTER = "Matokage"
+CHANNEL = "#TavernaTeste"
 
 #magia negra da connexão
 readbuffer = ""
@@ -61,7 +61,7 @@ while 1:
         if(line[0] == "PING"):
             s.send(bytes("PONG %s\r\n" % line[1], "UTF-8"))
             s.send(bytes("JOIN " + CHANNEL + "\n", "UTF-8"))
-#Line então é enumerado em indice e pintado uma palavra depois da outra          
+#Line então é enumerado em indice e printado uma palavra depois da outra          
         for index, i in enumerate(line):
             print(line[index])
 
@@ -77,13 +77,13 @@ while 1:
                     time.sleep(0.5)
                     s.send(bytes("NOTICE "+ usu[1] +" :Olá, %s! Seja bem vindo a Taverna! Cheque o nosso !menu\r\n" % usu[1], "UTF-8"))
                 else:
-                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Che gay.\r\n", "UTF-8"))
+                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Cheguei.\r\n", "UTF-8"))
             if(line[index] == "PART"):
                 usur = str.split(line[0],"!")
                 usu = str.split(usur[0],":")
                 if(usu[1] != "Januario"):
                     time.sleep(0.5)
-                    s.send(bytes("PRIVMSG "+ usu[1] +" :Volte sempre.\r\n", "UTF-8"))
+                    s.send(bytes("PRIVMSG "+ usu[1] +" :Volte sempre!\r\n", "UTF-8"))
             if(line[index] == ":sopa")|(line[index] == ":Sopa")|(line[index] == ":SOPA"):
                 time.sleep(0.5)
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :Infelizmente a sopa acabou :^(\r\n", "UTF-8"))
@@ -93,15 +93,12 @@ while 1:
             if(line[index] == ":ayy")|(line[index] == ":Ayy")|(line[index] == ":AYY"):
                 time.sleep(0.5)
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :lmao\r\n", "UTF-8"))
-            if(line[index] == ":!cn")|(line[index] == ":!CN")|(line[index] == ":!Cn")|(line[index] == ":!cN"):
-                time.sleep(0.5)
-                s.send(bytes("PRIVMSG "+ CHANNEL +" :Canal errado, parceiro.\r\n", "UTF-8"))
 #Serviços de taverna
             if(line[index] == ":!menu"):
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :\x01ACTION Dá o menu a você\x01\r\n", "UTF-8"))
                 time.sleep(2)
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :==Menu==\r\n", "UTF-8"))
-                s.send(bytes("PRIVMSG "+ CHANNEL +" :Água     | !cruristin\r\n", "UTF-8"))
+                s.send(bytes("PRIVMSG "+ CHANNEL +" :Água     | !h2o\r\n", "UTF-8"))
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :Feijoada | !nada\r\n", "UTF-8"))
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :Amendoin | !mendoin\r\n", "UTF-8"))
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :Picanha  | !pica\r\n", "UTF-8"))
@@ -143,9 +140,9 @@ while 1:
                 if(numb[0] == 5):
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :A água é o único liquido que não é bloated.\r\n", "UTF-8"))
                 if(numb[0] == 6):
-                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Se todo mundo bebesse água não teria fome na africa.\r\n", "UTF-8"))
+                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Se todo mundo bebesse água não estariam me enchendo o saco.\r\n", "UTF-8"))
                 if(numb[0] == 7):
-                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Estilo não é marra.\r\n", "UTF-8"))
+                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Cuidado com esse ácido hidrico.\r\n", "UTF-8"))
                 if(numb[0] == 8):
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :.yt oPwnAq2xMUg\r\n", "UTF-8"))
             if(line[index] == ":!nada"):
