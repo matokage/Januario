@@ -15,3 +15,5 @@
 * Sistema de moedas e custos
 * Um meio criativo de ganhar essas moedas
 * Métodos para relacionar nome e valores na sua carteira
+
+Januario is based on @RobertSzkutak/ircecho.py
