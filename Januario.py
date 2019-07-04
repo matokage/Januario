@@ -69,7 +69,7 @@ while 1:
             if(line[index] == ":VERSION"):
                 usur = str.split(line[0],"!")
                 usu = str.split(usur[0],":")
-                s.send(bytes("NOTICE "+ usu[1] +" :\001VERSION Januario Ver.0.5.3 Python 3.6.4\001\r\n", "UTF-8"))
+                s.send(bytes("NOTICE "+ usu[1] +" :\001VERSION Januario Ver.0.5.4 Python 3.6.4\001\r\n", "UTF-8"))
             if(line[index] == "JOIN"):
                 usur = str.split(line[0],"!")
                 usu = str.split(usur[0],":")
@@ -122,12 +122,12 @@ while 1:
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :\x01ACTION Dá a linguisa para %s\x01\r\n" % usu[1], "UTF-8"))
                 time.sleep(2)
                 s.send(bytes("PRIVMSG "+ CHANNEL +" ::^)\r\n", "UTF-8"))
-            if(line[index] == ":!cruristin"):
+            if(line[index] == ":!h2o"):
                 usur = str.split(line[0],"!")
                 usu = str.split(usur[0],":")
                 s.send(bytes("PRIVMSG "+ CHANNEL +" :\x01ACTION Dá água a %s\x01\r\n" % usu[1], "UTF-8"))
                 time.sleep(2)
-                resp = [1,2,3,4,5,6,7,8]
+                resp = [1,2,3,4,5,6,7]
                 numb = random.sample(resp,1)
                 if(numb[0] == 1):
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :Beba água.\r\n", "UTF-8"))
@@ -139,11 +139,9 @@ while 1:
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :Água faz bem para a saúde.\r\n", "UTF-8"))
                 if(numb[0] == 5):
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :A água é o único liquido que não é bloated.\r\n", "UTF-8"))
-                if(numb[0] == 6):
-                    s.send(bytes("PRIVMSG "+ CHANNEL +" :Se todo mundo bebesse água não estariam me enchendo o saco.\r\n", "UTF-8"))
-                if(numb[0] == 7):
+                if(numb[0] == 6)
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :Cuidado com esse ácido hidrico.\r\n", "UTF-8"))
-                if(numb[0] == 8):
+                if(numb[0] == 7):
                     s.send(bytes("PRIVMSG "+ CHANNEL +" :.yt oPwnAq2xMUg\r\n", "UTF-8"))
             if(line[index] == ":!nada"):
                 usur = str.split(line[0],"!")
